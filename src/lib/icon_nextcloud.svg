@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="../main_site.css" ?><?xml-stylesheet type="text/css" href="../shared/style.css" ?><!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   class="icon"
+   version="1.1"
+   id="Layer_1"
+   inkscape:export-filename="nextcloud-logo.png"
+   x="0px"
+   y="0px"
+   viewBox="0 0 500 500"
+   width="500"
+   height="500"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs1" /><sodipodi:namedview
+   id="namedview1"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="false"
+   inkscape:zoom="0.74025243"
+   inkscape:cx="151.97518"
+   inkscape:cy="351.90698"
+   inkscape:window-width="1440"
+   inkscape:window-height="875"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1"><sodipodi:guide
+     position="0,500"
+     orientation="0,500"
+     id="guide5"
+     inkscape:locked="false" /><sodipodi:guide
+     position="500,500"
+     orientation="500,0"
+     id="guide6"
+     inkscape:locked="false" /><sodipodi:guide
+     position="500,0"
+     orientation="0,-500"
+     id="guide7"
+     inkscape:locked="false" /><sodipodi:guide
+     position="0,0"
+     orientation="-500,0"
+     id="guide8"
+     inkscape:locked="false" /></sodipodi:namedview>
+   <path
+   id="path1052"
+   inkscape:connector-curvature="0"
+   inkscape:export-filename="Nextcloud Hub logo variants.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   class="s0"
+   d="m 250.41925,136.097 c -51.82173,0 -95.79164,34.96655 -109.40139,82.60062 C 129.08316,193.57195 103.64341,175.98399 74.016054,175.98399 33.291521,175.98399 0,209.27548 0,250.00001 c 0,40.72451 33.291521,74.01601 74.016054,74.01601 29.627356,0 55.067106,-17.69267 67.001806,-42.71364 13.60975,47.73877 57.57966,82.60062 109.40139,82.60062 51.40294,0 94.95411,-34.54779 108.98261,-81.44902 11.9347,24.70689 37.37445,41.98079 66.58305,41.98079 40.72453,0 74.01606,-33.29149 74.01606,-74.01601 0,-40.72451 -33.29153,-74.01601 -74.01606,-74.01601 -29.2086,0 -54.22959,17.27389 -66.58305,41.9808 C 345.37336,170.64479 301.82219,136.097 250.41925,136.097 Z m 0,43.13238 c 39.04948,0 70.35189,31.30239 70.35189,70.35186 0,39.04946 -31.30241,70.35185 -70.35189,70.35185 -39.04948,0 -70.3519,-31.30239 -70.3519,-70.35185 0,-39.04947 31.30242,-70.35186 70.3519,-70.35186 z M 74.016054,219.11637 c 17.273906,0 30.464876,13.60974 30.464876,30.46487 0,17.27389 -13.60973,30.46486 -30.464876,30.46486 -17.2739,0 -30.464881,-13.60974 -30.464881,-30.46486 0,-16.85513 13.609737,-30.46487 30.464881,-30.46487 z m 351.968856,0 c 17.27391,0 30.46488,13.60974 30.46488,30.46487 0,17.27389 -13.60974,30.46486 -30.46488,30.46486 -17.27391,0 -30.46488,-13.60974 -30.46488,-30.46486 -0.41877,-16.85513 13.19097,-30.46487 30.46488,-30.46487 z"
+   style="mix-blend-mode:normal;fill-opacity:1;stroke-width:1.0469" />
+</svg>

@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+@theme {
+	--face-color: var(--color-tarred-700);
+	--shadow-color: var(--color-tarred-800);
+
+	--font-display: 'Source Code Pro', 'sans-serif';
+
+	/* tarblue */
+	--color-tarblue-50: #e6f6f9;
+	--color-tarblue-100: #d1eff5;
+	--color-tarblue-200: #a3e0ea;
+	--color-tarblue-300: #76d0e0;
+	--color-tarblue-400: #48c1d6;
+	--color-tarblue-500: #2aa6bb;
+	--color-tarblue-600: #207d8e;
+	--color-tarblue-700: #165560;
+	--color-tarblue-800: #0b2b31;
+	--color-tarblue-900: #061619;
+	--color-tarblue-950: #030b0c;
+
+	/* tarred */
+	--color-tarred-50: #f9f1f1;
+	--color-tarred-100: #f1dfdf;
+	--color-tarred-200: #e5c2c3;
+	--color-tarred-300: #d7a2a3;
+	--color-tarred-400: #c98283;
+	--color-tarred-500: #bd6567;
+	--color-tarred-600: #ab494b;
+	--color-tarred-700: #8c3c3d;
+	--color-tarred-800: #5d2829;
+	--color-tarred-900: #2e1414;
+	--color-tarred-950: #190b0b;
+
+	/* font sizes */
+	--text-xs: 0.75em;
+	--text-sm: 0.875em;
+	--text-base: 1em;
+	--text-lg: 1.125em;
+	--text-xl: 1.25em;
+	--text-2xl: 1.5em;
+	--text-3xl: 1.875em;
+	--text-4xl: 2.25em;
+	--text-5xl: 3em;
+	--text-6xl: 4em;
+}
+
+:root {
+	word-break: normal;
+
+	--grid-unit: 1rem;
+	--border-radius-base: 1em;
+}
+
+html {
+	/* static background pattern */
+	overflow: hidden;
+}
+
+body {
+	/* background dots */
+	background-color: var(--color-tarblue-800);
+	background-size: 4em 4em;
+	background-image: radial-gradient(circle, rgba(150, 150, 150, 50%) 0.1em, rgba(0, 0, 0, 0) 1px);
+	color: var(--color-fg);
+	margin: 0;
+
+	/* static background pattern */
+	overflow: auto;
+	height: 100vh;
+}
+
+/* button */
+div.wrapper {
+	--offset-angle: 130deg;
+	--thickness: 0.75em;
+	border-radius: 0.5em;
+}
+div.face {
+	background-color: var(--face-color);
+	border-radius: inherit;
+	z-index: 10;
+	grid-column: 1;
+	grid-row: 1;
+	display: flex;
+	transform: translate(
+		calc(cos(var(--offset-angle)) * var(--thickness)),
+		calc(-1 * sin(var(--offset-angle)) * var(--thickness))
+	);
+}
+div.shadow {
+	background-color: var(--shadow-color);
+	border-radius: inherit;
+	z-index: 0;
+	grid-column: 1;
+	grid-row: 1;
+	display: flex;
+}
+div.wrapper:not(.selected) div.face:hover:not(:active),
+div.wrapper:not(.selected) div.face:hover.no-press:not(.selected) {
+	--thickness: 0.65em;
+}
+div.wrapper.selected div.face:hover:not(:active),
+div.wrapper.selected div.face:hover.no-press:not(.selected) {
+	--thickness: 0.35em;
+}
+div.face:active:not(.no-press) {
+	--thickness: 0.2em;
+}
+div.face:not(.no-press) {
+	cursor: pointer;
+}
+
+.selected {
+	color: var(--color-tarblue-50);
+	--face-color: var(--color-tarblue-500);
+	--shadow-color: var(--color-tarblue-600);
+}
+.selected .face {
+	--thickness: 0.45em;
+}

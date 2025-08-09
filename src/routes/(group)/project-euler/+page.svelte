@@ -1,0 +1,90 @@
+<script>
+	import ButtonComponent from '$lib/ButtonComponent.svelte';
+	import TerminalComponent from '$lib/TerminalComponent.svelte';
+
+	import Highlight from 'svelte-highlight';
+	import typescript from 'svelte-highlight/languages/typescript';
+	import style from 'svelte-highlight/styles/tokyo-night-dark';
+</script>
+
+<svelte:head>
+	{@html style}
+</svelte:head>
+
+<div class="nav-card mx-auto mb-32 grid grid-cols-1 place-items-center">
+	<ButtonComponent class="mb-8">
+		<span class="text-4xl">Project Euler</span>
+	</ButtonComponent>
+	<TerminalComponent title="hi!">
+		<p>hello</p>
+		<p>this page will be focused on some programming challenges on Project Euler</p>
+		<p></p>
+		<a href="https://projecteuler.net/">[click to open Project Euler's site]</a>
+	</TerminalComponent>
+
+	<div class="mt-8"></div>
+
+	<ButtonComponent class="selected w-full">
+		<div class="grid grid-cols-1 gap-2">
+			<span class="mb-2 text-xl font-bold">Problem 1:</span>
+			<span
+				>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6,
+				and 9. The sum of these multiples is 23.</span
+			>
+			<span>Find the sum of all the multiples of 3 or 5 below 1000.</span>
+		</div>
+	</ButtonComponent>
+	<TerminalComponent title="about problem 1">
+		<p>so</p>
+		<p>this question is a basic example to show off loops and the modulus operator</p>
+		<p>below is an example of a solution in JS</p>
+	</TerminalComponent>
+	<ButtonComponent class="w-[80%]">
+		<div style="all: unset; width: 100%;">
+			<Highlight
+				language={typescript}
+				code={`let total=0;
+
+for (let i; i<1000; i++) {
+	if (i%3 || i%5) {
+		total += i;
+	}
+}
+					
+console.log(total);`}
+			/>
+		</div>
+	</ButtonComponent>
+	<TerminalComponent title="golf">
+		<p>in python, ive done some work trying to get the code as small as possible</p>
+		<p>my main goals was to have the entirety of the code, including output, be a single line</p>
+	</TerminalComponent>
+	<ButtonComponent class="w-[80%]">
+		<div style="all: unset; width: 100%;">
+			<Highlight
+				language={typescript}
+				code={`print(sum([i for i in range(1000) if i%3==0 or i%5==0]))`}
+			/>
+		</div>
+	</ButtonComponent>
+	<TerminalComponent title="how does that code work??">
+		<p>the single line of code above starts with print, we just print whatever value is inside</p>
+		<p>then we are taking the sum of something</p>
+		<p></p>
+		<p>the something we are taking the sum of is a list created using List Comprehension</p>
+		<a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+			>[more on list comprehension can be seen here]</a
+		>
+		<p>this lets us loop and run functions inline to create a list</p>
+		<p></p>
+		<p>our list is everything from 0 to 999 that passes the if statement</p>
+		<p>the if statement simply returns true when i is a multiple of 3 or 5</p>
+	</TerminalComponent>
+</div>
+
+<style>
+	:global(code.hljs) {
+		background: var(--color-tarblue-800) !important;
+		border-radius: 0.5rem;
+	}
+</style>
