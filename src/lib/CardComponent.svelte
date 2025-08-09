@@ -15,30 +15,21 @@
 <div class="card-component">
 	<a {href}>
 		<ButtonComponent button="true">
-			<div
-				class="grid w-full {flipped === 'true'
-					? 'grid-cols-[1fr_auto] place-content-end'
-					: 'grid-cols-[auto_1fr] place-content-end'}"
-			>
+			<div class="card-content w-full">
 				<div
-					class="icon-container row-start-1 size-36 place-self-center p-2 max-[30rem]:hidden {flipped ===
-					'true'
-						? 'col-start-2 ml-4'
-						: 'col-start-1 mr-4'}"
+					class="icon-container size-36 p-2 max-[30rem]:size-28 {flipped === 'true'
+						? 'float-right ml-4'
+						: 'float-left mr-4'}"
 				>
 					<div class="h-full w-full overflow-hidden">
 						{@render children()}
 					</div>
 				</div>
-				<div
-					class="row-start-1 grid grid-rows-[auto_auto] place-content-start {flipped === 'true'
-						? 'col-start-1 justify-end'
-						: 'col-start-2'}"
-				>
-					<span class="mb-2 text-[1.5em] font-extrabold {flipped === 'true' ? 'text-right' : ''}"
-						>{title}</span
-					>
-					<span class="text-lg {flipped === 'true' ? 'text-right' : ''}">{content}</span>
+				<div class="content-text">
+					<h3 class="mb-2 text-[1.5em] font-extrabold {flipped === 'true' ? 'text-right' : ''}">
+						{title}
+					</h3>
+					<p class="text-lg {flipped === 'true' ? 'text-right' : ''}">{content}</p>
 				</div>
 			</div>
 		</ButtonComponent>
@@ -46,9 +37,22 @@
 </div>
 
 <style>
+	.card-content {
+		overflow: hidden; /* Clears float containment */
+	}
+
 	.icon-container {
 		background: var(--color-tarblue-800);
 		border-radius: 0.5em;
+		shape-outside: margin-box; /* Improves text wrapping around the floated element */
+	}
+
+	.content-text h3 {
+		clear: none; /* Allows title to wrap around icon */
+	}
+
+	.content-text p {
+		clear: none; /* Allows paragraph to wrap around icon */
 	}
 
 	.icon-container :global(svg) {
