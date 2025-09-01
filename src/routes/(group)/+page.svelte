@@ -28,9 +28,9 @@
 		},
 		{
 			title: 'Notes App',
-			content: 'I have been unhappy with every notes app I have tried. So I made my own.',
+			content: 'I have been unhappy with every notes app I have tried. So I made my own. At the moment its just an open test site, but I plan to build it into an actual app.',
 			icon: IconSvelte,
-			href: 'https://example.com'
+			href: 'https://notes.tartarus6.com.com'
 		},
 		{
 			title: 'Project Euler',
