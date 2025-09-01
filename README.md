@@ -3,9 +3,13 @@ This is the repo for the website residing at [tartarus6.com](https://tartarus6.c
 
 ## Testing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`,
 
+Start the development servers by running:
 ```bash
+# Start the file server
+npm run start
+# Start the web server
 npm run dev
 
 # or start the server and open the app in a new browser tab
