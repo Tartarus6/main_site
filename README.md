@@ -7,8 +7,6 @@ Once you've created a project and installed dependencies with `npm install` (or 
 
 Start the development servers by running:
 ```bash
-# Start the file server
-npm run start
 # Start the web server
 npm run dev
 
