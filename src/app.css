@@ -119,3 +119,7 @@ div.face:not(.no-press) {
 .selected .face {
 	--thickness: 0.45em;
 }
+
+path {
+	opacity: 1;
+}

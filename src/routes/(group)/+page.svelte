@@ -9,6 +9,7 @@
 	import IconMinio from '$lib/icon_minio.svg?raw';
 	import IconCasaos from '$lib/icon_casaos.svg?raw';
 	import IconDesmos from '$lib/icon_desmos.svg?raw';
+	import IconSlimepedia from '$lib/iconSlimePink.svg?raw';
 	import BingoIconComponent from '$lib/BingoIconComponent.svelte';
 
 	type Cards = {
@@ -24,48 +25,54 @@
 			content:
 				'I have spent a very very long time proving the surface of a sphere using only polygons. I ended up using a bunch of trapezoids, and proving what the surface area approaches. This page is my ramblings explaining how I did it.',
 			icon: IconDesmos,
-			href: '/sphere'
+			href: '/sphere',
+		},
+		{
+			title: "Slimepedia",
+			content: "I made a very, VERY, faithful recreation of the Slimepedia from the game Slime Rancher 2. It acts as a wiki built into the game, and now it's built into my website.",
+			icon: IconSlimepedia,
+			href: "https://slimepedia.tartarus6.com",
 		},
 		{
 			title: 'Notes App',
 			content: 'I have been unhappy with every notes app I have tried. So I made my own. At the moment its just an open test site, but I plan to build it into an actual app.',
 			icon: IconSvelte,
-			href: 'https://notes.tartarus6.com'
+			href: 'https://notes.tartarus6.com',
 		},
 		{
 			title: 'Project Euler',
 			content:
 				'Project Euler is a website with a bunch of programming challenges. Solving them is how I learned to program. Here is a page that walks through how to solve a few, as a resource to help learning programming.',
 			icon: IconProjectEuler,
-			href: '/project-euler'
+			href: '/project-euler',
 		},
 		{
 			title: 'Nextcloud',
 			content:
-				'I really just use the file sharing stuff, but its a well-featured office and free office suite.',
+				'I really just use the file sharing stuff, but its a well-featured and free office suite.',
 			icon: IconNextcloud,
-			href: 'https://nextcloud.tartarus6.com'
+			href: 'https://nextcloud.tartarus6.com',
 		},
 		{
 			title: 'Wireguard VPN',
 			content:
 				"I found a neat web-gui for manging it. It's got a few flaws, but it's pretty okay. A self-hosted VPN is pretty nice.",
 			icon: IconWireguard,
-			href: 'https://wireguard.tartarus6.com'
+			href: 'https://wireguard.tartarus6.com',
 		},
 		{
 			title: 'Minio Server',
 			content:
 				"A decent S3 server. I'd like to switch to something else (the web interface is really slow), but I haven't found a good alternative yet.",
 			icon: IconMinio,
-			href: 'https://minio.tartarus6.com'
+			href: 'https://minio.tartarus6.com',
 		},
 		{
 			title: 'CasaOS',
 			content:
-				'It was a bit of an ordeal to get it working on fedora, but I managed. Its a really nice looking web-based server manager that lets you install the included docker containers with the push of a button.',
+				'It was a bit of an ordeal to get it working on a fedora server, but I managed. Its a really nice looking web-based server manager that lets you install the included docker containers with the push of a button.',
 			icon: IconCasaos,
-			href: 'https://casaos.tartarus6.com'
+			href: 'https://casaos.tartarus6.com',
 		}
 	];
 </script>
@@ -81,7 +88,7 @@
 	</TerminalComponent>
 	<TerminalComponent title="website?">
 		<p>yeah!</p>
-		<p>this website (will be) sort of like a resume for me</p>
+		<p>this website is sort of like a resume for me</p>
 		<p></p>
 		<p>itll explain cool projects ive done, link to em, and such</p>
 	</TerminalComponent>
