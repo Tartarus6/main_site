@@ -14,7 +14,7 @@
 
 <div class="card-component">
 	<a {href}>
-		<ButtonComponent button="true">
+		<ButtonComponent button={true}>
 			<div class="card-content w-full">
 				<div
 					class="icon-container size-36 p-2 max-[30rem]:size-28 {flipped === 'true'

@@ -11,15 +11,25 @@
 	import IconDesmos from '$lib/icon_desmos.svg?raw';
 	import IconSlimepedia from '$lib/iconSlimePink.svg?raw';
 	import BingoIconComponent from '$lib/BingoIconComponent.svelte';
+	import type { Snippet, Component } from 'svelte';
 
 	type Cards = {
 		title: string;
 		content: string;
-		icon: string;
+		icon: string | { component: Component, props: any };
 		href: string;
 	}[];
 
 	const cards: Cards = [
+		{
+			title: 'Bingo',
+			content: "Right now, it's just got one board which has catchphrases from someone. But I might add more.",
+			icon: {
+				component: BingoIconComponent,
+				props: {}
+			},
+			href: '/bingo',
+		},
 		{
 			title: 'Sphere Surface Area',
 			content:
@@ -41,8 +51,14 @@
 		},
 		{
 			title: "Bingo Problem",
-			content: 'hi',
-			icon: IconSvelte,
+			content: 'An interesting math problem that I have been working on a closed solution for, and have yet to succeed. Combinatorics is neat.',
+			icon: { 
+				component: BingoIconComponent, 
+				props: { 
+					interactive: false, 
+					boardState: [false, true, true, true, true, true, true, true, false, true, true, false, true, true, true, true, true, false, true, true, true, true, true, true, false]
+				}
+			},
 			href: '/bingo-problem',
 		},
 		{
@@ -101,26 +117,19 @@
 </div>
 
 <div class="grid w-full grid-cols-1">
-	<div class="nav-card">
-		<CardComponent
-			flipped="false"
-			title="Bingo"
-			content="Right now, it's just got one board which has catchphrases from someone. But I might add more."
-			href="/bingo"
-		>
-			<BingoIconComponent></BingoIconComponent>
-		</CardComponent>
-	</div>
-
 	{#each cards as card, i}
-		<div class="nav-card {i % 2 === 1 ? '' : 'justify-self-end'}">
+		<div class="nav-card {i % 2 === 0 ? '' : 'justify-self-end'}">
 			<CardComponent
-				flipped={i % 2 === 0 ? 'true' : 'false'}
+				flipped={i % 2 === 1 ? 'true' : 'false'}
 				title={card.title}
 				content={card.content}
 				href={card.href}
 			>
-				{@html card.icon}
+				{#if typeof card.icon === 'string'}
+					{@html card.icon}
+				{:else if typeof card.icon === 'object' && 'component' in card.icon}
+					<svelte:component this={card.icon.component} {...card.icon.props} />
+				{/if}
 			</CardComponent>
 		</div>
 	{/each}
