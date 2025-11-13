@@ -40,6 +40,12 @@
 			href: 'https://notes.tartarus6.com',
 		},
 		{
+			title: "Bingo Problem",
+			content: 'hi',
+			icon: IconSvelte,
+			href: '/bingo-problem',
+		},
+		{
 			title: 'Project Euler',
 			content:
 				'Project Euler is a website with a bunch of programming challenges. Solving them is how I learned to program. Here is a page that walks through how to solve a few, as a resource to help learning programming.',

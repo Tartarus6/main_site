@@ -43,7 +43,7 @@
 		user-select: none;
 		font-size: 1rem;
 		display: flex;
-		align-items: center; /* Vertically center the prefix */
+		align-items: top; /* Vertically center the prefix */
 		text-decoration: none; /* Prevent underline or other decorations */
 	}
 

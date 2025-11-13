@@ -2,10 +2,23 @@
 	import { onMount } from 'svelte';
 	import ButtonComponent from './ButtonComponent.svelte';
 
-	const boardSize = 5;
+	interface Props {
+		boardSize?: number,
+		interactive?: boolean,
+		boardState?: boolean[], // n^2 length array setting the filled (true) and un-filled (false) values in the board (the value is ignored in the free space)
+	}
+
+	let { boardSize = 5, interactive = true, boardState }: Props = $props();
+
 	let scaleFactor = $state(1);
 	let board: HTMLDivElement;
 	let selected: boolean[] = $state(Array(boardSize * boardSize).fill(false));
+
+	// applying boardState
+	if (boardState && boardState.length == selected.length) {
+		selected = boardState;
+	}
+
 	const centerIndex = Math.floor((boardSize * boardSize) / 2);
 
 	selected[centerIndex] = true;
@@ -34,10 +47,10 @@
 	style="grid-template-columns: repeat({boardSize}, 1fr); scale: {scaleFactor}; transform: translate(calc(var(--thickness) / 2), calc(var(--thickness) / 2))"
 >
 	{#each Array(boardSize * boardSize) as _, index}
-		<button onmouseenter={() => toggleSelected(index)}>
+		<button onmouseenter={() => {if (interactive) toggleSelected(index)}}>
 			<ButtonComponent
-				button="true"
-				fitContainerHeight="true"
+				button={true}
+				fitContainerHeight={true}
 				class={index === centerIndex
 					? 'center selected'
 					: selected[index]
