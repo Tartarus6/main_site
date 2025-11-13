@@ -29,7 +29,7 @@
 		},
 		{
 			title: "Slimepedia",
-			content: "I made a very, VERY, faithful recreation of the Slimepedia from the game Slime Rancher 2. It acts as a wiki built into the game, and now it's built into my website.",
+			content: "I made a very, VERY, faithful recreation of the Slimepedia from the game Slime Rancher 2. It acts as a wiki built into the game, and now it's built into my website. (Sound Recommended)",
 			icon: IconSlimepedia,
 			href: "https://slimepedia.tartarus6.com",
 		},

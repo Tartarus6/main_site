@@ -22,9 +22,8 @@
 		<a href="https://projecteuler.net/">[click to open Project Euler's site]</a>
 	</TerminalComponent>
 
-	<div class="mt-8"></div>
-
-	<ButtonComponent class="w-full">
+	<!-- Problem 1 -->
+	<ButtonComponent class="w-full mt-8">
 		<div class="grid grid-cols-1 gap-2">
 			<span class="mb-2 text-xl font-bold">Problem 1:</span>
 			<span
@@ -34,7 +33,7 @@
 			<span>Find the sum of all the multiples of 3 or 5 below 1000.</span>
 		</div>
 	</ButtonComponent>
-	<TerminalComponent title="about problem 1">
+	<TerminalComponent title="about problem 1" class="w-[80%]!">
 		<p>so</p>
 		<p>this question is a basic example to show off loops and the modulus operator</p>
 		<p>below is an example of a solution in JS</p>
@@ -55,7 +54,7 @@ console.log(total);`}
 			/>
 		</div>
 	</ButtonComponent>
-	<TerminalComponent title="golf">
+	<TerminalComponent title="golf" class="w-[80%]!">
 		<p>in python, ive done some work trying to get the code as small as possible</p>
 		<p>my main goals was to have the entirety of the code, including output, be a single line</p>
 	</TerminalComponent>
@@ -67,7 +66,7 @@ console.log(total);`}
 			/>
 		</div>
 	</ButtonComponent>
-	<TerminalComponent title="how does that code work??">
+	<TerminalComponent title="how does that code work??" class="w-[80%]!">
 		<p>the single line of code above starts with print, we just print whatever value is inside</p>
 		<p>then we are taking the sum of something</p>
 		<p></p>
@@ -81,9 +80,8 @@ console.log(total);`}
 		<p>the if statement simply returns true when i is a multiple of 3 or 5</p>
 	</TerminalComponent>
 
-	<div class="mt-8"></div>
-
-	<ButtonComponent class="w-full">
+	<!-- Problem 2 -->
+	<ButtonComponent class="w-full mt-8">
 		<div class="grid grid-cols-1 gap-2">
 			<span class="mb-2 text-xl font-bold">Problem 2:</span>
 			<span>
@@ -93,6 +91,9 @@ console.log(total);`}
 			<span>By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.</span>
 		</div>
 	</ButtonComponent>
+	<TerminalComponent title="WIP" class="w-[80%]!">
+		<p>Under Construction...</p>
+	</TerminalComponent>
 </div>
 
 <style>
