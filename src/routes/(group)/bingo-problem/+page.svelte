@@ -23,7 +23,7 @@
         </TerminalComponent>
         
         <!-- Example -->
-        <div class="grid grid-cols-[1fr_auto] items-center w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] w-full gap-4 p-4 lg:p-0 rounded-xl lg:rounded-none bg-tarblue-900/30 lg:bg-transparent border-2 border-tarblue-700 lg:border-0">
             <TerminalComponent title="an example">
                 <p>Here's one example valid bingo board for 'n=5'</p>
                 <p>(the blue ones are "filled in" and the red ones aren't)</p>
@@ -32,14 +32,18 @@
                 <p>and each column has one cell un-filled, so no vertical bingos</p>
                 <p>and each row has one cell un-filled, sp no horizontal bingos</p>
             </TerminalComponent>
-            <ButtonComponent class="">
-                <div class="rounded-xl bg-tarblue-800 size-64">
+            <ButtonComponent class="mx-auto lg:mx-0">
+                <div class="rounded-xl bg-tarblue-800 w-64 h-64 sm:w-72 sm:h-72 lg:w-64 lg:h-64">
                     <div class="m-4">
-                        <BingoIconComponent interactive={false} boardState={[false, true,  true,  true,  true,
-                                                                                        true,  true,  true,  true,  false,
-                                                                                        true,  true,  true,  false, true,
-                                                                                        true,  false, true,  true,  true,
-                                                                                        true,  true,  false, true,  true, ]}></BingoIconComponent>
+                        <BingoIconComponent
+                            interactive={false}
+                            boardState={[false, true,  true,  true,  true,
+                                         true,  true,  true,  true,  false,
+                                         true,  true,  true,  false, true,
+                                         true,  false, true,  true,  true,
+                                         true,  true,  false, true,  true, ]}
+                        >
+                        </BingoIconComponent>
                     </div>
                 </div>
             </ButtonComponent>
@@ -83,7 +87,7 @@
         </TerminalComponent>
 
         <!-- Issue #1 -->
-        <div class="grid grid-cols-[1fr_auto] items-center pt-16 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] w-full gap-4 p-4 lg:p-0 rounded-xl lg:rounded-none bg-tarblue-900/30 lg:bg-transparent border-2 border-tarblue-700 lg:border-0">
             <TerminalComponent title="dang it...">
                 <p>Some of the permutations our method generates are invalid</p>
                 <p></p>
@@ -95,29 +99,47 @@
                 <p>the corrected expression for the number of permutations of the 3 criteria is the following</p>
                 <p class="py-1">{@html katex.renderToString("(n-1)(n-3)(n-3)")}</p>
             </TerminalComponent>
-            <ButtonComponent>
+            <ButtonComponent class="mx-auto lg:mx-0">
             <div class="flex flex-col gap-2">
-                    <div class="flex flex-row">
-                        <span class="place-self-center pr-2">this one's good</span>
-                        <div class="rounded-xl bg-tarblue-800 size-48">
+                    <div class="flex flex-col sm:flex-row items-center gap-2">
+                        <span class="place-self-center sm:pr-2">this one's good</span>
+                        <div class="rounded-xl bg-tarblue-800 w-48 h-48 sm:w-44 sm:h-44">
                             <div class="m-4">
-                                <BingoIconComponent interactive={false} boardState={[false, true,  true,  true,  true,
-                                                                                                true,  true,  true,  true,  true,
-                                                                                                true,  true,  true,  false, true,
-                                                                                                true,  false, true,  true,  true,
-                                                                                                true,  true,  true,  true,  true, ]}></BingoIconComponent>
+                                <BingoIconComponent
+                                    interactive={false}
+                                    boardState={[false, true,  true,  true,  true,
+                                                true,  true,  true,  true,  true,
+                                                true,  true,  true,  false, true,
+                                                true,  false, true,  true,  true,
+                                                true,  true,  true,  true,  true, ]}
+                                    boardText={["1", "",  "",  "",  "",
+                                                "",  "",  "",  "",  "",
+                                                "",  "",  "",  "3", "",
+                                                "",  "2", "",  "",  "",
+                                                "",  "",  "",  "",  "", ]}
+                                >
+                                </BingoIconComponent>
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row w-full place-content-end">
-                        <span class="place-self-center pr-2">this one's not</span>
-                        <div class="rounded-xl bg-tarblue-800 size-48 self-end">
+                    <div class="flex flex-col sm:flex-row w-full items-center sm:place-content-end gap-2">
+                        <span class="place-self-center sm:pr-2">this one's not</span>
+                        <div class="rounded-xl bg-tarblue-800 w-48 h-48 sm:w-44 sm:h-44 self-center sm:self-end">
                             <div class="m-4">
-                                <BingoIconComponent interactive={false} boardState={[false, true,  true,  true,  true,
-                                                                                                true,  true,  true,  true,  true,
-                                                                                                true,  true,  true,  false, true,
-                                                                                                true,  false, true,  true,  true,
-                                                                                                true,  true,  true,  true,  true, ]}></BingoIconComponent>
+                                <BingoIconComponent
+                                    interactive={false}
+                                    boardState={[false, true,  true,  true,  false,
+                                                true,  true,  true,  true,  true,
+                                                true,  true,  true,  false, true,
+                                                true,  true,  true,  true,  true,
+                                                true,  true,  true,  true,  true, ]}
+                                    boardText={["1", "",  "",  "",  "2",
+                                                "",  "",  "",  "",  "",
+                                                "",  "",  "",  "3", "",
+                                                "",  "",  "",  "",  "",
+                                                "",  "",  "",  "",  "", ]}
+                                >
+                                </BingoIconComponent>
                             </div>
                         </div>
                     </div>
@@ -139,7 +161,7 @@
         </TerminalComponent>
 
         <!-- OBJECTION (a.k.a Issue #2) -->
-        <div class="grid grid-cols-[1fr_auto] items-center w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] w-full gap-4 p-4 lg:p-0 rounded-xl lg:rounded-none bg-tarblue-900/30 lg:bg-transparent border-2 border-tarblue-700 lg:border-0">
             <TerminalComponent title="objection!">
                 <p>Our current method doesn't count any invalid boards anymore, but it does count some duplicate boards</p>
                 <p></p>
@@ -149,14 +171,43 @@
                 <p></p>
                 <p>This means that our method counts this board twice</p>
             </TerminalComponent>
-            <ButtonComponent class="">
-                <div class="rounded-xl bg-tarblue-800 size-64">
-                    <div class="m-4">
-                        <BingoIconComponent interactive={false} boardState={[false, true,  true,  true,  true,
-                                                                                        true,  true,  true,  false, true,
-                                                                                        true,  true,  true,  true,  true,
-                                                                                        true,  false, true,  true,  true,
-                                                                                        true,  true,  false, true,  true, ]}></BingoIconComponent>
+            <ButtonComponent class="mx-auto lg:mx-0">
+                <div class="flex flex-col gap-2">
+                    <div class="rounded-xl bg-tarblue-800 w-56 h-56 sm:w-64 sm:h-64">
+                        <div class="m-4">
+                            <BingoIconComponent
+                                interactive={false}
+                                boardState={[false, true,  true,  true,  true,
+                                             true,  true,  true,  false, true,
+                                             true,  true,  true,  true,  false,
+                                             true,  false, true,  true,  true,
+                                             true,  true,  false, true,  true, ]}
+                                boardText={["1", "",  "",  "",  "",
+                                            "",  "",  "",  "",  "",
+                                            "",  "",  "",  "",  "3",
+                                            "",  "2", "",  "",  "",
+                                            "",  "",  "",  "",  "", ]}
+                            >
+                            </BingoIconComponent>
+                        </div>
+                    </div>
+                    <div class="rounded-xl bg-tarblue-800 w-56 h-56 sm:w-64 sm:h-64">
+                        <div class="m-4">
+                            <BingoIconComponent
+                                interactive={false}
+                                boardState={[false, true,  true,  true,  true,
+                                             true,  true,  true,  false, true,
+                                             true,  true,  true,  true,  false,
+                                             true,  false, true,  true,  true,
+                                             true,  true,  false, true,  true, ]}
+                                boardText={["1", "",  "",  "",  "",
+                                            "",  "",  "",  "2", "",
+                                            "",  "",  "",  "",  "3",
+                                            "",  "",  "",  "",  "",
+                                            "",  "",  "",  "",  "", ]}
+                            >
+                            </BingoIconComponent>
+                        </div>
                     </div>
                 </div>
             </ButtonComponent>
@@ -166,9 +217,9 @@
             <p>Criteria 3 doesn't cause duplicates since our method can only create boards with once un-filled cell meeting criteria 3</p>
             <p></p>
             <p>So the number of duplicates depends on the number of cells on a given board that meet criteria 1 and 2</p>
-            <p>The formula for the number of times a given board appears using our method works out to the following</p>
-            <p>('a' is the number of cells meeting criteria 1, 'b' is the number of cells meeting criteria 2)</p>
+            <p>The formula for the number of times a given board appears using our method works out to:</p>
             <p class="py-1">{@html katex.renderToString("a\\cdot b")}</p>
+            <p>where 'a' is the number of cells meeting criteria 1 and  'b' is the number of cells meeting criteria 2</p>
         </TerminalComponent>
 
         <!-- Progress -->

@@ -6,17 +6,24 @@
 		boardSize?: number,
 		interactive?: boolean,
 		boardState?: boolean[], // n^2 length array setting the filled (true) and un-filled (false) values in the board (the value is ignored in the free space)
+		boardText?: string[], // n^2 length array setting the text in each cell of the board (the text in the free space is ignored)
 	}
 
-	let { boardSize = 5, interactive = true, boardState }: Props = $props();
+	let { boardSize = 5, interactive = true, boardState, boardText }: Props = $props();
 
 	let scaleFactor = $state(1);
 	let board: HTMLDivElement;
 	let selected: boolean[] = $state(Array(boardSize * boardSize).fill(false));
+	let text: string[] = Array(boardSize * boardSize).fill("");
 
 	// applying boardState
 	if (boardState && boardState.length == selected.length) {
 		selected = boardState;
+	}
+
+	// applying boardText
+	if (boardText && boardText.length == text.length) {
+		text = boardText;
 	}
 
 	const centerIndex = Math.floor((boardSize * boardSize) / 2);
@@ -56,7 +63,15 @@
 					: selected[index]
 						? 'bingo selected'
 						: 'bingo'}
-			></ButtonComponent>
+			>
+				<div class="absolute inset-0 grid place-items-center text-center text-3xl pointer-events-none">
+					{#if text[index]}
+						<span class="px-2">{text[index]}</span>
+					{:else}
+						<span class="text-transparent">.</span>
+					{/if}
+				</div>
+			</ButtonComponent>
 		</button>
 	{/each}
 </div>
