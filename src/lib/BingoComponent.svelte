@@ -158,8 +158,8 @@
 	{#each Array(boardSize * boardSize) as _, index}
 		<button onmousedown={() => toggleSelected(index)} class="aspect-square">
 			<ButtonComponent
-				button="true"
-				fitContainerHeight="true"
+				button={true}
+				fitContainerHeight={true}
 				class={index === centerIndex
 					? 'center selected'
 					: selected[index]

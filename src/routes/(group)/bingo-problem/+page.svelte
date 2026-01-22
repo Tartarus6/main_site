@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex w-full place-content-center">
-    <div class="flex flex-col w-[80%] place-items-center">
+    <div class="flex flex-col w-full lg:w-[80%] place-items-center gap-8">
         <ButtonComponent class="mb-8">
             <h3 class="p-2">Bingo Problem</h3>
         </ButtonComponent>
@@ -33,7 +33,7 @@
                 <p>and each row has one cell un-filled, sp no horizontal bingos</p>
             </TerminalComponent>
             <ButtonComponent class="mx-auto lg:mx-0">
-                <div class="rounded-xl bg-tarblue-800 w-64 h-64 sm:w-72 sm:h-72 lg:w-64 lg:h-64">
+                <div class="rounded-xl bg-tarblue-800 w-48 h-48">
                     <div class="m-4">
                         <BingoIconComponent
                             interactive={false}
@@ -50,7 +50,7 @@
         </div>
         
         <!-- Yapping -->
-        <TerminalComponent title="deceptively difficult" class="pt-16">
+        <TerminalComponent title="deceptively difficult">
             <p>This problem is very similar to the 8-queens problem</p>
             <p>in which you have an 8 by 8 chess board and 8 queens</p>
             <p>then you find how many ways you can place the queens so that no queen is in the path of another</p>
@@ -148,7 +148,7 @@
         </div>
 
         <!-- Criteria 4 -->
-        <TerminalComponent title="remember criteria 4?" class="pt-16">
+        <TerminalComponent title="remember criteria 4?">
             <p>Next we'll work on criteria 4.</p>
             <p>We have 'n-3' columns left to un-fill a cell on, and any of them can be unfilled on any of the 'n-3' "unique" rows left</p>
             <p></p>
@@ -173,7 +173,7 @@
             </TerminalComponent>
             <ButtonComponent class="mx-auto lg:mx-0">
                 <div class="flex flex-col gap-2">
-                    <div class="rounded-xl bg-tarblue-800 w-56 h-56 sm:w-64 sm:h-64">
+                    <div class="rounded-xl bg-tarblue-800 w-48 h-48">
                         <div class="m-4">
                             <BingoIconComponent
                                 interactive={false}
@@ -191,7 +191,7 @@
                             </BingoIconComponent>
                         </div>
                     </div>
-                    <div class="rounded-xl bg-tarblue-800 w-56 h-56 sm:w-64 sm:h-64">
+                    <div class="rounded-xl bg-tarblue-800 w-48 h-48">
                         <div class="m-4">
                             <BingoIconComponent
                                 interactive={false}
@@ -223,7 +223,7 @@
         </TerminalComponent>
 
         <!-- Progress -->
-        <TerminalComponent title="how fix?" class="pt-16">
+        <TerminalComponent title="how fix?">
             <p>so how do we account for this mathematically?</p>
             <p>thats the problem...</p>
             <p>i haven't figured that out yet</p>
