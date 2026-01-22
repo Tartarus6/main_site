@@ -4,14 +4,11 @@
 
 	import IconProjectEuler from '$lib/icon_project_euler.svg?raw';
 	import IconSvelte from '$lib/icon_svelte.svg?raw';
-	import IconNextcloud from '$lib/icon_nextcloud.svg?raw';
-	import IconWireguard from '$lib/icon_wireguard.svg?raw';
-	import IconMinio from '$lib/icon_minio.svg?raw';
-	import IconCasaos from '$lib/icon_casaos.svg?raw';
 	import IconDesmos from '$lib/icon_desmos.svg?raw';
 	import IconSlimepedia from '$lib/iconSlimePink.svg?raw';
+	import IconHiby from '$lib/icon_hiby.svg?raw'
 	import BingoIconComponent from '$lib/BingoIconComponent.svelte';
-	import type { Snippet, Component } from 'svelte';
+	import type { Component } from 'svelte';
 
 	type Cards = {
 		title: string;
@@ -54,6 +51,13 @@
 				}
 			},
 			href: '/bingo-problem',
+		},
+		{
+			title: 'HiBy OS Crack',
+			content:
+				"HiBy is a company that makes modern MP3 players. This project is working on cracking the firmware of HiBy's linux devices.",
+			icon: IconHiby,
+			href: 'https://github.com/Tartarus6/hiby_os_crack',
 		},
 		{
 			title: 'Notes App',
